@@ -1,0 +1,76 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border: 1px black solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  position: absolute;
+  top: 30px;
+}
+
+.x {
+  position: relative;
+}
+
+.x::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 180px;
+  background-color: black;
+  transform: rotate(-45deg);
+}
+
+.x::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 180px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.circle {
+  position: relative;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: white;
+}
